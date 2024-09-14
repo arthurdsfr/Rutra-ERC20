@@ -360,6 +360,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "burn",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "decimals",
 				"outputs": [
@@ -416,6 +429,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "maxRutra",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -424,7 +450,7 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "_amount",
 						"type": "uint256"
 					}
 				],
@@ -947,11 +973,11 @@
 			]
 		},
 		"contracts/MyToken.sol": {
-			"keccak256": "0x4a8d1c3135efcfd2347e4de6b913fc0a29930387eb374466b730df6192cdbbfc",
+			"keccak256": "0x6916d7e4a971509fd3d60c228d7906a99d5a81e5edb2c408ad63ff79347f00ae",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2bd91918827ebf34f68e7ce1df88e822376ce070e0b7a0212dc3da6d5bac4839",
-				"dweb:/ipfs/QmXntDCpw6bVXfTWvkGBQidWj2DEsejv5apcKmeVA1JD4Z"
+				"bzz-raw://ca18eb9e9bfc2e7e23fcc1cb6391375920302c05a7b216e8d02e3af0afd3fd71",
+				"dweb:/ipfs/QmNUMQRXF7RmTf7qe1zFdzXRcaJaKGZZRSCkjGGFDTyVKd"
 			]
 		}
 	},

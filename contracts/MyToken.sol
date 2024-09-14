@@ -6,14 +6,20 @@ import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract RutraToken is ERC20, ERC20Permit, Ownable {
-    constructor() ERC20("RutraToken", "RUTRA") ERC20Permit("RutraToken") Ownable(msg.sender) {
+    uint256 public maxRutra = 10000 * 10 ** decimals();  // Limite maximale de tokens
 
+    constructor() ERC20("RutraToken", "RUTRA") ERC20Permit("RutraToken") Ownable(msg.sender) {
+        _mint(msg.sender, 100 * 10 ** decimals());
     }
 
-    function mint(address _to, uint256 amount) public onlyOwner {
-    _mint(_to, amount);
+    function mint(address _to, uint256 _amount) public onlyOwner {
+    require(totalSupply() + _amount <= maxRutra, "total supply 100% minted");
+    _mint(_to, _amount);
 }
 
+    function burn(uint256 _amount) public onlyOwner {
+    _burn(msg.sender, _amount);
+    }
 
 }
 
